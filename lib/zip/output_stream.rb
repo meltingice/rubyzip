@@ -28,8 +28,7 @@ module Zip
       super()
       @file_name = file_name
       @output_stream = if stream
-                         iostream = @file_name.dup
-                         iostream.reopen
+                         iostream = @file_name
                          iostream.rewind
                          iostream
                        else
